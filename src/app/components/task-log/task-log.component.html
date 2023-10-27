@@ -1,0 +1,20 @@
+<div>
+  <h1 class="tituloTable">Log de tasks</h1>
+  <table class="tabelaTask">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody *ngIf="tasks.length > 0">
+      <tr class="rowTask" *ngFor="let task of tasks">
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
